@@ -1,71 +1,77 @@
 # Notes Helper – PDF Text Extraction, Summaries, and Keywords (Python/Flask)
 
-Notes Helper is a lightweight Python/Flask application that converts PDF documents into structured notes.
+Notes Helper is a lightweight Python/Flask application that converts PDF documents into structured notes.  
 It extracts full text, generates detailed summaries, identifies keywords, and allows exporting and managing processed notes.
 
-Features
+---
 
-PDF Processing
+## Features
 
-- Extracts full text from multi-page PDFs
+### PDF Processing
+- Extracts full text from multi-page PDFs  
+- Cleans PDF noise (HTML tags, CID artifacts, encoding issues)  
+- Normalizes spacing and formatting  
 
-- Cleans PDF noise (HTML tags, CID artifacts, encoding issues)
+### Text Analysis
+- Generates detailed extractive summaries  
+- Extracts keywords and important terms  
+- Cleans unwanted characters and noise before processing  
 
-- Normalizes spacing and formatting
-
-Text Analysis
-
-- Generates detailed extractive summaries
-
-- Extracts keywords and important terms
-
-- Cleans unwanted characters and noise before processing
-
-Notes Management
-
-- Saves notes including title, full text, summary, and keywords
-
+### Notes Management
+- Saves notes including title, full text, summary, and keywords  
 - Search across:
+  - Titles  
+  - Summaries  
+  - Full text  
+  - Keywords  
+- Delete individual notes  
 
-  - Titles
+### Interface
+- Modern dark-themed UI  
+- Clear file selection indicator  
+- Tag-style keyword display  
+- Simple navigation and layout  
 
-  - Summaries
-
-  - Full text
-
-  - Keywords
-
-- Delete individual notes
-
-Interface
-
-- Modern dark-themed UI
-
-- Clear file selection indicator
-
-- Tag-style keyword display
-
-- Simple navigation and layout
-
-Export Options
-
+### Export Options
 - Export processed notes as:
+  - TXT files  
+  - PDF files (print-friendly format)  
 
-- TXT files
+---
 
-- PDF files (print-friendly format)
+## Technology Stack
 
-Technology Stack
+- Backend: Python, Flask  
+- PDF Extraction: pdfplumber  
+- Text Processing: YAKE (keywords), custom summarizer  
+- Exporting: FPDF  
+- Storage: Local JSON file  
+- Frontend: HTML and CSS (dark theme)  
 
-- Backend: Python, Flask
+---
 
-- PDF Extraction: pdfplumber
+## Installation
 
-- Text Processing: YAKE (keywords), custom summarizer
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/notes-helper.git
+cd notes-helper
+```
 
-- Exporting: FPDF
+### 2. Install Dependencies
 
-- Storage: Local JSON file
+```bash
+pip install -r requirements.txt
+```
 
-- Frontend: HTML and CSS (dark theme)
+### 3. Run the Application
 
+```bash
+python app.py
+```
+
+### 4.Open in browser
+
+```bash
+http://localhost:5000
+```
